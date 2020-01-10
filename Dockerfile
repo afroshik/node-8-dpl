@@ -7,18 +7,9 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update -qq && apt-get install -qq --no-install-recommends \
     nodejs \
     yarn \
+    python-pip \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update -qqy \
-  && apt-get install -qqy \
-    default-jre \
-    zip \
-    unzip \
-    xvfb \
-    python-pip \
-    libpython-dev \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 RUN gem install dpl
 
