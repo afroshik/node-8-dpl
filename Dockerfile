@@ -14,5 +14,3 @@ RUN apt-get update -qq && apt-get install -qq --no-install-recommends \
 RUN gem install dpl
 
 RUN pip install -U pip
-
-RUN pip install awscli
